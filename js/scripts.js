@@ -6,16 +6,16 @@ $(document).ready(function() {
     for (var index = 0; index <= countToInput; index += countByInput) {
     $("ul.results").append("<li>" + index + "</li>");
     }
-    if (countToInput === NaN || countByInput === NaN) {
+    console.log(countToInput);
+    // debugger;
+    if (isNaN(countToInput) || isNaN(countByInput)) {
       alert("Please enter a number");
     } else if (countToInput < 0 || countByInput < 0) {
       alert("Please enter a positive number");
     } else if (countByInput > countToInput) {
       alert("Please enter a smaller 'Count by' number than your 'Count to' number");
-    } else (countByInput === "" || countToInput === "") {
-      alert("Please enter a number");
     }
-
+    // debugger;
   event.preventDefault();
   });
 });
